@@ -21,6 +21,9 @@ let reservation = require('./app/routers/reservation.router.js');
 
 let book = require('./app/routers/book.router.js');
 
+let prestamo = require('./app/routers/prestamo.router.js');
+
+
 const cors = require('cors')
 const corsOptions = {
   origin: 'http://localhost:4200',
@@ -35,7 +38,9 @@ app.use('/', employee);
 
 app.use('/', room);
 app.use('/', reservation);
+
 app.use('/', book);
+app.use('/', prestamo);
 
 app.get("/",(req,res) => {
   
